@@ -1,0 +1,57 @@
+strong { font-weight: bold; }
+b { font-weight: bold; }
+em { font-style: italic; }
+
+// rounded corners
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
+// tl - top left, tr - top right etc.
+.rounded-corners-custom (@tl: 5px, @tr: 5px, @br: 5px, @bl: 5px) {
+    border-radius: @tl @tr @br @bl;
+    -webkit-border-radius: @tl @tr @br @bl;
+    -moz-border-radius: @tl @tr @br @bl;
+}
+
+// Clear CSS floated elements
+// @see http://sonspring.com/journal/clearing-floats
+.clear() {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+// Force Element To Self-Clear its Children
+// @see http://css-tricks.com/snippets/css/clear-fix/
+.clearfix() {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    &:before { content: ""; display: table; }
+    &:after { content: ""; display: table; clear: both; }
+}
+
+// Nastaveni border-box
+// @see http://css-tricks.com/box-sizing/
+.border-box() {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.rotate(@deg: 90deg){
+    -ms-transform: rotate(@deg); /* IE 9 */
+    -webkit-transform: rotate(@deg); /* Chrome, Safari, Opera */
+    transform: rotate(@deg);
+}
+
+.t(@t) {
+    -webkit-transition: all @t ease-in-out;
+    -moz-transition: all @t ease-in-out;
+    -o-transition: all @t ease-in-out;
+    transition: all @t ease-in-out;
+}

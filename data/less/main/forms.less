@@ -1,0 +1,126 @@
+input[type="text"],
+input[type="search"],
+input[type="tel"],
+input[type="email"] {}
+
+textarea {}
+
+select {}
+
+button,
+input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+form {
+  .clearfix();
+}
+
+input[type="checkbox"] {
+  display: none;
+
+  &+label {
+    // .font-supreme-regular();
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    // color: @purple-6;
+    padding-left: 32px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      // border: 2px solid @purple-4;
+      left: 16px;
+      top: 50%;
+      border-radius: 4px;
+      transform: translateY(-50%);
+      // background-color: @purple-2;
+    }
+  }
+
+  &:checked+label {
+
+
+    &:before {
+      // border: 2px solid @cyan;
+      // background-color: @cyan;
+      // background-image: url("../images/checkbox-check.svg");
+      background-repeat: no-repeat;
+      // background-size: 70%;
+      background-position: center center;
+    }
+  }
+}
+
+/*.block-select {
+  position: relative;
+  cursor: pointer;
+  .active-item {
+    .font-regular_ibm();
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 48px;
+    border: none;
+    padding: 0px 16px;
+    //background-color: @gray5;
+    width: 100%;
+    font-size: 1.4rem;
+    background-image: url("../images/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 10px;
+  }
+  .menu {
+    .t(0.3s);
+    display: block;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    background-color: @white;
+    z-index: 1;
+    /*-webkit-box-shadow: 0px 0px 47px -28px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 47px -28px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 47px -28px rgba(0, 0, 0, 0.75);*/
+/*padding: 0px;
+    //border: 1px solid @gray6;
+    max-height: 150px;
+    overflow: auto;
+    &.active {
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+      top: calc(100%);
+    }
+    .help {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+    }
+    a {
+      .t(0.3s);
+      .font-regular_ibm();
+      font-size: 1.4rem;
+      //color: @gray1;
+      display: inline-block;
+      padding: 10px 16px;
+      width: 100%;
+      &:hover {
+        //background-color: @red;
+        color: @white;
+      }
+    }
+  }
+  select {
+    display: none !important;
+  }
+}*/

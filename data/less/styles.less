@@ -1,0 +1,130 @@
+﻿@import "base/reset.less";
+@import "main/colors.less";
+
+@import "main/start.less";
+
+@import "base/lesslib.less";
+
+/* Využití v případě lightbox.js https://github.com/lokesh/lightbox2/ */
+@import "libs/lightbox.less";
+
+/* Využití v případě Bootstrap modal */
+//@import "libs/modal.less";
+
+/* Využití v případě knihovny select2 */
+//@import "libs/select2.less";
+
+/* Využití v případě swipe.js */
+//@import "libs/swipe.less"+
+
+@import "main/fonts.less";
+@import "main/forms.less";
+
+// Konkrétní styly
+@import "main/basics.less";
+
+@media screen and (min-width: 2000px) and (min-height: 0px) {
+  @import "custom/custom2000.less";
+
+  .wrap-block {
+    width: 2000px;
+  }
+}
+
+@media screen and (min-width: 1921px) and (min-height: 0px) {
+
+  /* .help-bigger {
+    width: 1920px !important;
+    margin: 0 auto;
+  }
+  section {
+    .two-blocks {
+      width: 1920px !important;
+      margin: 0 auto !important;
+    }
+  }*/
+  .wrap-block {
+    width: 1920px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+//rozliseni větší než FullHD
+@media screen and (max-width: 1919px) and (min-width: 0px) {
+  @import "custom/custom1920.less";
+  .container {
+    width: 1530px;
+  }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 0px) {
+  @import "custom/custom1178.less";
+
+  .container {
+    width: 1250px;
+  }
+
+  .btn-burger {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
+  .container {
+    width: 948px;
+  }
+
+  @import "custom/custom0978.less";
+}
+
+@media screen and (max-width: 1023px) and (min-width: 0px) {
+  .container {
+    width: 748px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @import "custom/custom0768.less";
+}
+
+@media screen and (max-width: 767px) and (min-width: 0px) {
+  .container {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @import "custom/custom0480.less";
+}
+
+@media screen and (max-width: 480px) and (min-width: 0px) {
+  @import "custom/custom0300.less";
+}
+
+@media screen and (max-width: 350px) and (min-width: 0px) {
+  section {
+    &.foodmenu-section {
+      .foodmenu-block {
+        margin: 20px auto;
+
+        .date-block {
+          .block {
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .food {
+          padding: 0px 20px;
+        }
+      }
+    }
+  }
+}
