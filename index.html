@@ -19,23 +19,67 @@
 			<div class="flex-holder">
 				<a href="" class="logo"><img src="data/images/logo.svg" alt=""></a>
 				<div class="holder">
+					<div class="bg-nav"></div>
 					<nav aria-label="Navigation" role="navigation">
 						<h2 class="screenReaderElement">Navigace</h2>
+						<div class="close" id="close-nav">
+							<div></div>
+							<div></div>
+						</div>
+						<a href="" class="account">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2Z"
+									stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M4.271 18.346C4.271 18.346 6.5 15.5 12 15.5C17.5 15.5 19.73 18.346 19.73 18.346"
+									stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M12 12C12.7956 12 13.5587 11.6839 14.1213 11.1213C14.6839 10.5587 15 9.79565 15 9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6C11.2044 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9C9 9.79565 9.31607 10.5587 9.87868 11.1213C10.4413 11.6839 11.2044 12 12 12V12Z"
+									stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+						<div class="currency">
+							<div class="active-select"><a href="#">CZK</a> <img class="arrow"
+									src="data/images/arrow-black-down.svg" alt="" /></div>
+							<div class="select-block">
+								<div class="select-item">
+									<a href="#" id="CZK" data-slug="CZK" class="itme-text">CZK</a>
+								</div>
+								<div class="select-item">
+									<a href="#" id="EUR" data-slug="EUR" class="itme-text">EUR</a>
+								</div>
+							</div>
+							<select name="currency" id="currency-select">
+								<option>CZK</option>
+								<option>EUR</option>
+							</select>
+						</div>
 						<ul>
-							<li><a href="">Produkty <img class="arrow" src="data/images/arrow-black-down.svg"
-										alt="" /></a>
+							<li><a href="https://www.google.com/" class="main-link">Produkty <img class="arrow"
+										src="data/images/arrow-black-down.svg" alt="" /></a>
 								<ul>
 									<li><a href="" class="child">Zlato</a></li>
 									<li><a href="" class="child">Stříbro</a></li>
 									<li><a href="" class="child">Lorem</a></li>
 								</ul>
 							</li>
-							<li><a href="">Akční nabídka</a></li>
-							<li><a href="">O nás</a></li>
-							<li><a href="">Kontakt</a></li>
+							<li><a href="" class="main-link">Akční nabídka</a></li>
+							<li><a href="" class="main-link">O nás</a></li>
+							<li><a href="" class="main-link">Kontakt</a></li>
 						</ul>
 					</nav>
-					<form action="">
+					<a href="" class="fake-search" id="fake-search">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+								stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M21 20.9999L16.65 16.6499" stroke="black" stroke-width="1.5" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</a>
+					<form action="" class="serach-form ">
 						<input type="search" id="search-field" placeholder="Napište, co hledáte">
 						<button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +123,11 @@
 								stroke="black" stroke-linecap="round" stroke-linejoin="round" />
 						</svg>
 					</a>
+					<div class="hamburger">
+						<div class="hold">
+							<div></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -140,38 +189,39 @@
 			<div class="container">
 				<h2 class="medium">Vyberte si z naší nabídky</h2>
 				<div class="grid-block">
-					<div class="block">
+					<a href="" class="block">
 						<img src="data/images/offer-1.jpg" alt="">
 						<div class="text">
 							<span>Investiční</span>
 							<h3>Zlaté mince</h3>
 						</div>
-					</div>
-					<div class="block">
+					</a>
+					<a href="" class="block">
 						<img src="data/images/offer-2.jpg" alt="">
 						<div class="text">
 							<span>Investiční</span>
 							<h3>Zleté slitky</h3>
 						</div>
-					</div>
-					<div class="block">
+					</a>
+					<a href="" class="block">
 						<img src="data/images/offer-3-2.jpg" alt="">
 						<div class="text">
 							<span>historické</span>
 							<h3>Zlaté mince</h3>
 						</div>
-					</div>
-					<div class="block">
+					</a>
+					<a href="" class="block">
 						<img src="data/images/offer-4.jpg" alt="">
 						<div class="text">
 							<span>Pamětní</span>
 							<h3>Zlaté mince ČNB</h3>
 						</div>
+					</a>
+					<div class="btn-block">
+						<a href="" class="btn full-gold"><span>Zobrazit více</span></a>
 					</div>
 				</div>
-				<div class="btn-block">
-					<a href="" class="btn full-gold"><span>Zobrazit více</span></a>
-				</div>
+
 			</div>
 		</section>
 		<section class="products">
@@ -255,10 +305,11 @@
 							</div>
 						</div>
 					</a>
+					<div class="btn-block">
+						<a href="" class="btn full-gold"><span>Zobrazit více</span></a>
+					</div>
 				</div>
-				<div class="btn-block">
-					<a href="" class="btn full-gold"><span>Zobrazit více</span></a>
-				</div>
+
 			</div>
 		</section>
 		<section class="benefits">

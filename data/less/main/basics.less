@@ -10,6 +10,13 @@ img {
     user-select: none;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
 .header {
     .t(0.4s);
     z-index: 100;
@@ -56,6 +63,10 @@ img {
             flex-wrap: nowrap;
             align-items: center;
 
+            .bg-nav {
+                display: none;
+            }
+
             nav {
                 display: flex;
                 flex-direction: row;
@@ -63,6 +74,18 @@ img {
                 flex-wrap: nowrap;
                 align-items: center;
                 margin-right: 76px;
+
+                .close {
+                    display: none;
+                }
+
+                .account {
+                    display: none;
+                }
+
+                .currency {
+                    display: none;
+                }
 
                 ul {
                     display: flex;
@@ -187,6 +210,10 @@ img {
                 }
             }
 
+            .fake-search {
+                display: none;
+            }
+
             form {
                 margin-right: 44px;
                 position: relative;
@@ -307,6 +334,58 @@ img {
             }
 
             .account {}
+
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+}
+
+.close {
+    .t(0.3s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    right: 0px;
+    top: 100px;
+    cursor: pointer;
+    background-color: @black-2;
+    z-index: 15;
+    border-radius: 50%;
+
+    div {
+        background-color: @gold-1;
+        .t(0.3s);
+        height: 2px;
+        width: 40%;
+        position: absolute;
+        margin-top: 0px;
+        border-radius: 0px;
+
+        &:first-of-type {
+            transform: rotate(45deg);
+        }
+
+        &:last-of-type {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        .t(0.3s);
+
+        div {
+            &:first-of-type {
+                transform: rotate(-45deg);
+            }
+
+            &:last-of-type {
+                transform: rotate(45deg);
+            }
         }
     }
 }
@@ -461,10 +540,10 @@ h3 {
     &.full-gold {
         border-color: @gold-1;
         height: 118px;
-        background-color: @white;
+        background-color: @gold-1;
 
         &:hover {
-            border-color: @black;
+            border-color: @gold-1;
 
             span {
                 // border-color: @gold-1;
@@ -526,7 +605,9 @@ section {
             flex-wrap: nowrap;
             position: relative;
 
-            .bg {}
+            .bg {
+                max-width: 1920px;
+            }
 
             .text {
                 display: flex;
@@ -676,6 +757,7 @@ section {
         .grid-block {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            position: relative;
 
             .block {
                 .t(0.5s);
@@ -762,7 +844,7 @@ section {
 
         .btn-block {
             position: absolute;
-            right: 10px;
+            right: 0px;
             z-index: 5;
             bottom: -58px;
         }
@@ -983,7 +1065,7 @@ section {
 
         .btn-block {
             position: absolute;
-            right: 10px;
+            right: 0px;
             bottom: -46px;
             z-index: 5;
         }
@@ -994,6 +1076,7 @@ section {
             flex-wrap: wrap;
             position: relative;
             z-index: 3;
+            position: relative;
 
             .item {
                 width: 33.33%;
@@ -1272,12 +1355,36 @@ section {
                     li {
                         list-style: none;
 
-                        a {
+                        &:hover {
+                            a {
+                                &::after {
+                                    width: 100%;
+                                }
 
+
+                            }
+                        }
+
+                        a {
+                            position: relative;
                             color: @white;
                             font-size: 1.8rem;
                             line-height: 1.7em;
                             .font-regular-montserrat();
+
+
+                            &::after {
+                                .t(0.3s);
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                height: 2px;
+                                width: 0%;
+                                bottom: -1px;
+                                left: 0%;
+
+                                background-color: @white;
+                            }
                         }
                     }
                 }
